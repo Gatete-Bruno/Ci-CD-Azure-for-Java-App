@@ -7,7 +7,7 @@ pool:
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: 'app/pom.xml'
+    mavenPomFile: 'gs-spring-boot/app/pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageToolOption: 'Cobertura'
