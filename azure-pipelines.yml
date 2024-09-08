@@ -10,13 +10,13 @@ steps:
     mavenPomFile: 'gs-spring-boot/app/pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: 'Cobertura'
+    codeCoverageToolOption: 'JaCoCo'   # Changed from Cobertura to JaCoCo for JDK 11+
     javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'           # Ensure JDK 11 is used
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-
 
 # Copy files to the build artifact staging directory
 - task: CopyFiles@2
